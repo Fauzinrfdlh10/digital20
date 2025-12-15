@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Pernikahan - Fauzi & Firna</title>
+    <meta name="description" content="Undangan Pernikahan Mochammad Fauzi Nur Fadillah & Firna Amalia Aprilian">
+
+    <!-- Google Fonts - Modern Gen Z Style -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Great+Vibes&family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- GSAP for Advanced Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Cursor Trail Effect -->
+    <div class="cursor-trail"></div>
+
+    <!-- Opening Cover -->
+    <div id="opening-cover" class="opening-cover">
+        <!-- Particles Background -->
+        <div id="particles-js"></div>
+
+        <!-- Animated Background Shapes -->
+        <div class="bg-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+            <div class="shape shape-5"></div>
+        </div>
+
+        <div class="flower-animation-container">
+            <!-- Enhanced falling petals -->
+        </div>
+
+        <!-- Glowing Ornaments -->
+        <div class="ornament-top-left">
+            <img src="images/flower-ornament.png" alt="Flower Ornament">
+            <div class="ornament-glow"></div>
+        </div>
+        <div class="ornament-top-right">
+            <img src="images/flower-ornament.png" alt="Flower Ornament">
+            <div class="ornament-glow"></div>
+        </div>
+        <div class="ornament-bottom-left">
+            <img src="images/flower-ornament.png" alt="Flower Ornament">
+            <div class="ornament-glow"></div>
+        </div>
+        <div class="ornament-bottom-right">
+            <img src="images/flower-ornament.png" alt="Flower Ornament">
+            <div class="ornament-glow"></div>
+        </div>
+
+        <div class="cover-content">
+            <div class="wedding-badge">
+                <span class="badge-text">💍 WEDDING INVITATION 💍</span>
+            </div>
+            <p class="wedding-label animate-text">THE WEDDING OF</p>
+            <h1 class="couple-names-cover">
+                <span class="name-groom">Fauzi</span>
+                <span class="ampersand">&</span>
+                <span class="name-bride">Firna</span>
+            </h1>
+            <div class="cover-date">
+                <div class="date-line"></div>
+                <i class="fas fa-calendar-heart"></i>
+                <span>Minggu, 15 Maret 2025</span>
+                <div class="date-line"></div>
+            </div>
+            <div class="guest-info glass-card">
+                <p>Kepada Yth.</p>
+                <p class="guest-name">Bapak/Ibu/Saudara/i</p>
+                <p class="guest-subtitle">di Tempat</p>
+            </div>
+            <button id="open-invitation" class="open-btn neon-btn">
+                <span class="btn-bg"></span>
+                <i class="fas fa-envelope-open-text"></i>
+                <span>Buka Undangan</span>
+                <div class="btn-shimmer"></div>
+            </button>
+        </div>
+
+        <!-- Enhanced Floating Elements -->
+        <div class="floating-elements">
+            <span class="float-item heart">❤️</span>
+            <span class="float-item heart">💕</span>
+            <span class="float-item heart">💗</span>
+            <span class="float-item flower">🌸</span>
+            <span class="float-item flower">🌷</span>
+            <span class="float-item sparkle">✨</span>
+            <span class="float-item sparkle">💫</span>
+            <span class="float-item ring">💍</span>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content hidden">
+        <!-- Music Control - Enhanced -->
+        <div class="music-control">
+            <div class="music-visualizer">
+                <span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <button id="music-toggle" class="music-btn playing">
+                <i class="fas fa-music"></i>
+            </button>
+        </div>
+        <!-- Romantic Background Music -->
+        <audio id="bg-music" loop>
+            <source src="https://www.bensound.com/bensound-music/bensound-love.mp3" type="audio/mpeg">
+        </audio>
+
+        <!-- Hero Section - Gen Z Style -->
+        <section class="hero-section">
+            <div class="hero-video-bg">
+                <div class="gradient-overlay"></div>
+            </div>
+            <div class="hero-particles" id="hero-particles"></div>
+            <div class="hero-ornaments">
+                <img src="images/flower-ornament.png" alt="" class="hero-flower-left parallax-element">
+                <img src="images/flower-ornament.png" alt="" class="hero-flower-right parallax-element">
+            </div>
+            <div class="hero-content" data-aos="zoom-in" data-aos-duration="1500">
+                <div class="bismillah-container">
+                    <div class="bismillah-decoration left"></div>
+                    <p class="bismillah">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم</p>
+                    <div class="bismillah-decoration right"></div>
+                </div>
+                <div class="ayat-card glass-card-premium">
+                    <div class="quote-mark">"</div>
+                    <p class="ayat">
+                        Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu
+                        istri-istri dari jenismu sendiri, supaya kamu cenderung dan merasa tenteram
+                        kepadanya, dan dijadikan-Nya di antaramu rasa kasih dan sayang.
+                    </p>
+                    <p class="ayat-source">— QS. Ar-Rum: 21 —</p>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+                <p>Scroll Down</p>
+            </div>
+        </section>
+
+        <!-- Couple Section - Modern -->
+        <section class="couple-section">
+            <div class="section-bg-pattern"></div>
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">💑 THE COUPLE</span>
+                <h2 class="section-title script-font">Mempelai</h2>
+                <div class="title-decoration">
+                    <span class="line"></span>
+                    <div class="heart-badge">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <span class="line"></span>
+                </div>
+            </div>
+
+            <div class="couple-container">
+                <!-- Groom -->
+                <div class="couple-card groom-card" data-aos="fade-right" data-aos-delay="200">
+                    <div class="card-glow"></div>
+                    <div class="couple-photo-wrapper">
+                        <div class="photo-ring ring-1"></div>
+                        <div class="photo-ring ring-2"></div>
+                        <div class="photo-frame">
+                            <img src="images/groom.png" alt="Mempelai Pria">
+                            <div class="photo-overlay"></div>
+                        </div>
+                        <div class="photo-sparkles">
+                            <span>✨</span><span>✨</span><span>✨</span>
+                        </div>
+                    </div>
+                    <div class="couple-info">
+                        <h3 class="couple-name script-font">Mochammad Fauzi Nur Fadillah</h3>
+                        <p class="couple-child">Putra dari</p>
+                        <p class="couple-parents">Bapak H. Muhammad Hasan</p>
+                        <p class="couple-parents-divider">&</p>
+                        <p class="couple-parents">Ibu Hj. Fatimah Zahra</p>
+                        <div class="social-links">
+                            <a href="#" class="social-btn instagram">
+                                <i class="fab fa-instagram"></i>
+                                <span class="social-tooltip">Instagram</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="couple-divider" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="love-animation">
+                        <div class="heart-container">
+                            <div class="heart-main">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="heart-ring"></div>
+                            <div class="heart-particles">
+                                <span></span><span></span><span></span><span></span>
+                            </div>
+                        </div>
+                        <span class="and-text">&</span>
+                    </div>
+                </div>
+
+                <!-- Bride -->
+                <div class="couple-card bride-card" data-aos="fade-left" data-aos-delay="200">
+                    <div class="card-glow"></div>
+                    <div class="couple-photo-wrapper">
+                        <div class="photo-ring ring-1"></div>
+                        <div class="photo-ring ring-2"></div>
+                        <div class="photo-frame">
+                            <img src="images/bride.png" alt="Mempelai Wanita">
+                            <div class="photo-overlay"></div>
+                        </div>
+                        <div class="photo-sparkles">
+                            <span>✨</span><span>✨</span><span>✨</span>
+                        </div>
+                    </div>
+                    <div class="couple-info">
+                        <h3 class="couple-name script-font">Firna Amalia Aprilian</h3>
+                        <p class="couple-child">Putri dari</p>
+                        <p class="couple-parents">Bapak H. Abdullah Rahman</p>
+                        <p class="couple-parents-divider">&</p>
+                        <p class="couple-parents">Ibu Hj. Aisyah Putri</p>
+                        <div class="social-links">
+                            <a href="#" class="social-btn instagram">
+                                <i class="fab fa-instagram"></i>
+                                <span class="social-tooltip">Instagram</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Event Details Section - Ultra Modern -->
+        <section class="event-section">
+            <div class="event-bg-gradient"></div>
+            <div class="floating-shapes">
+                <div class="floating-shape s1"></div>
+                <div class="floating-shape s2"></div>
+                <div class="floating-shape s3"></div>
+            </div>
+
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">📅 SAVE THE DATE</span>
+                <h2 class="section-title script-font">Waktu & Tempat</h2>
+                <div class="title-decoration">
+                    <span class="line"></span>
+                    <div class="heart-badge">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <span class="line"></span>
+                </div>
+            </div>
+
+            <!-- Enhanced Countdown -->
+            <div class="countdown-wrapper" data-aos="fade-up" data-aos-delay="100">
+                <div class="countdown-bg-glow"></div>
+                <div class="countdown-container glass-card-premium">
+                    <h3 class="countdown-title">
+                        <span class="countdown-emoji">⏰</span>
+                        Menuju Hari Bahagia
+                        <span class="countdown-emoji">💒</span>
+                    </h3>
+                    <div class="countdown" id="countdown">
+                        <div class="countdown-item">
+                            <div class="countdown-flip">
+                                <span class="countdown-number" id="days">00</span>
+                            </div>
+                            <span class="countdown-label">Hari</span>
+                        </div>
+                        <div class="countdown-separator">:</div>
+                        <div class="countdown-item">
+                            <div class="countdown-flip">
+                                <span class="countdown-number" id="hours">00</span>
+                            </div>
+                            <span class="countdown-label">Jam</span>
+                        </div>
+                        <div class="countdown-separator">:</div>
+                        <div class="countdown-item">
+                            <div class="countdown-flip">
+                                <span class="countdown-number" id="minutes">00</span>
+                            </div>
+                            <span class="countdown-label">Menit</span>
+                        </div>
+                        <div class="countdown-separator">:</div>
+                        <div class="countdown-item">
+                            <div class="countdown-flip">
+                                <span class="countdown-number" id="seconds">00</span>
+                            </div>
+                            <span class="countdown-label">Detik</span>
+                        </div>
+                    </div>
+                    <div class="countdown-date-display">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Minggu, 15 Maret 2025</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="events-container">
+                <!-- Akad -->
+                <div class="event-card glass-card-premium" data-aos="fade-up" data-aos-delay="200">
+                    <div class="event-card-glow"></div>
+                    <div class="event-icon-wrapper">
+                        <div class="event-icon">
+                            <i class="fas fa-ring"></i>
+                        </div>
+                        <div class="event-icon-ring"></div>
+                    </div>
+                    <h3 class="event-title script-font">Akad Nikah</h3>
+                    <div class="event-details">
+                        <div class="event-detail">
+                            <div class="detail-icon">
+                                <i class="fas fa-calendar-alt"></i>
+                            </div>
+                            <span>Minggu, 15 Maret 2025</span>
+                        </div>
+                        <div class="event-detail">
+                            <div class="detail-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <span>08:00 - 10:00 WIB</span>
+                        </div>
+                        <div class="event-detail">
+                            <div class="detail-icon">
+                                <i class="fas fa-mosque"></i>
+                            </div>
+                            <span>Masjid Al-Ikhlas</span>
+                        </div>
+                    </div>
+                    <p class="event-address">
+                        <i class="fas fa-map-pin"></i>
+                        Jl. Kebahagiaan No. 123, Jakarta Selatan
+                    </p>
+                    <a href="https://maps.google.com" target="_blank" class="event-map-btn">
+                        <i class="fas fa-directions"></i>
+                        <span>Lihat Lokasi</span>
+                    </a>
+                </div>
+
+                <!-- Resepsi -->
+                <div class="event-card glass-card-premium" data-aos="fade-up" data-aos-delay="300">
+                    <div class="event-card-glow"></div>
+                    <div class="event-icon-wrapper">
+                        <div class="event-icon">
+                            <i class="fas fa-champagne-glasses"></i>
+                        </div>
+                        <div class="event-icon-ring"></div>
+                    </div>
+                    <h3 class="event-title script-font">Resepsi</h3>
+                    <div class="event-details">
+                        <div class="event-detail">
+                            <div class="detail-icon">
+                                <i class="fas fa-calendar-alt"></i>
+                            </div>
+                            <span>Minggu, 15 Maret 2025</span>
+                        </div>
+                        <div class="event-detail">
+                            <div class="detail-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <span>11:00 - 14:00 WIB</span>
+                        </div>
+                        <div class="event-detail">
+                            <div class="detail-icon">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <span>Gedung Balai Kartini</span>
+                        </div>
+                    </div>
+                    <p class="event-address">
+                        <i class="fas fa-map-pin"></i>
+                        Jl. Gatot Subroto Kav. 37, Jakarta Selatan
+                    </p>
+                    <a href="https://maps.google.com" target="_blank" class="event-map-btn">
+                        <i class="fas fa-directions"></i>
+                        <span>Lihat Lokasi</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Love Story Section - Modern Timeline -->
+        <section class="story-section">
+            <div class="story-bg-pattern"></div>
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">💕 OUR JOURNEY</span>
+                <h2 class="section-title script-font">Perjalanan Cinta</h2>
+                <div class="title-decoration">
+                    <span class="line"></span>
+                    <div class="heart-badge">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <span class="line"></span>
+                </div>
+            </div>
+
+            <div class="timeline-modern">
+                <div class="timeline-line">
+                    <div class="timeline-progress"></div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-marker">
+                        <div class="marker-dot">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="marker-ring"></div>
+                    </div>
+                    <div class="timeline-content glass-card-premium">
+                        <div class="timeline-year">2020</div>
+                        <h3 class="timeline-title">Pertama Bertemu 💫</h3>
+                        <p>Kami pertama kali bertemu di sebuah acara seminar kampus. Tatapan pertama yang tak terlupakan
+                            menjadi awal dari segalanya.</p>
+                        <div class="timeline-emoji">👀❤️</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-marker">
+                        <div class="marker-dot">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <div class="marker-ring"></div>
+                    </div>
+                    <div class="timeline-content glass-card-premium">
+                        <div class="timeline-year">2021</div>
+                        <h3 class="timeline-title">Menjalin Pertemanan 🤝</h3>
+                        <p>Dari pertemanan yang indah, kami semakin mengenal satu sama lain. Setiap percakapan membuat
+                            kami semakin dekat.</p>
+                        <div class="timeline-emoji">💬😊</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-marker">
+                        <div class="marker-dot">
+                            <i class="fas fa-heart-circle-check"></i>
+                        </div>
+                        <div class="marker-ring"></div>
+                    </div>
+                    <div class="timeline-content glass-card-premium">
+                        <div class="timeline-year">2022</div>
+                        <h3 class="timeline-title">Memulai Hubungan 💑</h3>
+                        <p>Di malam yang penuh bintang, dengan sebuket bunga mawar, cinta kami resmi terjalin dalam
+                            ikatan yang lebih serius.</p>
+                        <div class="timeline-emoji">🌹💕</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-marker">
+                        <div class="marker-dot">
+                            <i class="fas fa-ring"></i>
+                        </div>
+                        <div class="marker-ring"></div>
+                    </div>
+                    <div class="timeline-content glass-card-premium">
+                        <div class="timeline-year">2024</div>
+                        <h3 class="timeline-title">Lamaran 💍</h3>
+                        <p>Dengan restu kedua orang tua, kami memutuskan untuk melangkah ke jenjang yang lebih serius.
+                            Yes, I said YES!</p>
+                        <div class="timeline-emoji">💍🎉</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-marker">
+                        <div class="marker-dot">
+                            <i class="fas fa-mosque"></i>
+                        </div>
+                        <div class="marker-ring"></div>
+                    </div>
+                    <div class="timeline-content glass-card-premium">
+                        <div class="timeline-year">2025</div>
+                        <h3 class="timeline-title">Akad Nikah 💒</h3>
+                        <p>InsyaAllah, perjalanan cinta kami akan disempurnakan dalam ikatan suci pernikahan yang
+                            diberkahi Allah SWT.</p>
+                        <div class="timeline-emoji">🤲✨</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section - Pinterest Style -->
+        <section class="gallery-section">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">📸 GALLERY</span>
+                <h2 class="section-title script-font">Galeri Foto</h2>
+                <div class="title-decoration">
+                    <span class="line"></span>
+                    <div class="heart-badge">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <span class="line"></span>
+                </div>
+            </div>
+
+            <div class="gallery-masonry">
+                <div class="gallery-item large" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="images/couple-main.png" alt="Gallery 1">
+                    <div class="gallery-overlay">
+                        <div class="gallery-icon">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                        <span class="gallery-caption">Our Love Story 💕</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="images/gallery-1.png" alt="Gallery 2">
+                    <div class="gallery-overlay">
+                        <div class="gallery-icon">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                        <span class="gallery-caption">Beautiful Moments ✨</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="images/gallery-2.png" alt="Gallery 3">
+                    <div class="gallery-overlay">
+                        <div class="gallery-icon">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                        <span class="gallery-caption">Together Forever 💑</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400">
+                    <img src="images/gallery-3.png" alt="Gallery 4">
+                    <div class="gallery-overlay">
+                        <div class="gallery-icon">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                        <span class="gallery-caption">Sweet Memories 🌸</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="500">
+                    <img src="images/bride.png" alt="Gallery 5">
+                    <div class="gallery-overlay">
+                        <div class="gallery-icon">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                        <span class="gallery-caption">The Bride 👰</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="600">
+                    <img src="images/groom.png" alt="Gallery 6">
+                    <div class="gallery-overlay">
+                        <div class="gallery-icon">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                        <span class="gallery-caption">The Groom 🤵</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- RSVP Section - Modern Form -->
+        <section class="rsvp-section">
+            <div class="rsvp-bg-shapes"></div>
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">📋 RSVP</span>
+                <h2 class="section-title script-font">Konfirmasi Kehadiran</h2>
+                <div class="title-decoration">
+                    <span class="line"></span>
+                    <div class="heart-badge">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <span class="line"></span>
+                </div>
+                <p class="section-subtitle">Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila
+                    Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu. 🙏</p>
+            </div>
+
+            <form class="rsvp-form glass-card-premium" data-aos="fade-up" data-aos-delay="200">
+                <div class="form-group">
+                    <label for="name">
+                        <i class="fas fa-user"></i>
+                        Nama Lengkap
+                    </label>
+                    <input type="text" id="name" name="name" placeholder="Masukkan nama lengkap" required>
+                    <div class="input-focus-line"></div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="attendance">
+                            <i class="fas fa-check-circle"></i>
+                            Konfirmasi
+                        </label>
+                        <select id="attendance" name="attendance" required>
+                            <option value="">Pilih konfirmasi</option>
+                            <option value="hadir">✅ Ya, saya akan hadir</option>
+                            <option value="tidak">❌ Maaf, tidak bisa hadir</option>
+                            <option value="ragu">🤔 Masih belum pasti</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="guests">
+                            <i class="fas fa-users"></i>
+                            Jumlah Tamu
+                        </label>
+                        <select id="guests" name="guests">
+                            <option value="1">1 Orang</option>
+                            <option value="2">2 Orang</option>
+                            <option value="3">3 Orang</option>
+                            <option value="4">4 Orang</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="submit" class="submit-btn neon-btn">
+                    <span class="btn-bg"></span>
+                    <i class="fas fa-paper-plane"></i>
+                    <span>Kirim Konfirmasi</span>
+                </button>
+            </form>
+        </section>
+
+        <!-- Wishes Section - Chat Style -->
+        <section class="wishes-section">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">💌 WISHES</span>
+                <h2 class="section-title script-font">Ucapan & Doa</h2>
+                <div class="title-decoration">
+                    <span class="line"></span>
+                    <div class="heart-badge">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <span class="line"></span>
+                </div>
+            </div>
+
+            <form class="wish-form glass-card-premium" data-aos="fade-up" data-aos-delay="200">
+                <div class="form-group">
+                    <label for="wish-name">
+                        <i class="fas fa-user"></i>
+                        Nama Anda
+                    </label>
+                    <input type="text" id="wish-name" name="wish-name" placeholder="Masukkan nama Anda" required>
+                </div>
+                <div class="form-group">
+                    <label for="wish-message">
+                        <i class="fas fa-comment-dots"></i>
+                        Ucapan & Doa
+                    </label>
+                    <textarea id="wish-message" name="wish-message" rows="4"
+                        placeholder="Tuliskan ucapan dan doa untuk kedua mempelai... 💕" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn neon-btn">
+                    <span class="btn-bg"></span>
+                    <i class="fas fa-heart"></i>
+                    <span>Kirim Ucapan</span>
+                </button>
+            </form>
+
+            <div class="wishes-list" data-aos="fade-up" data-aos-delay="300">
+                <div class="wish-card">
+                    <div class="wish-avatar gradient-avatar">
+                        <span>BS</span>
+                    </div>
+                    <div class="wish-content">
+                        <div class="wish-header">
+                            <h4 class="wish-name">Budi Santoso</h4>
+                            <span class="wish-date">15 Des 2024</span>
+                        </div>
+                        <p class="wish-text">Selamat menempuh hidup baru! Semoga menjadi keluarga yang sakinah,
+                            mawaddah, warahmah. Bahagia selalu untuk kalian berdua! 💕🤲</p>
+                    </div>
+                </div>
+                <div class="wish-card">
+                    <div class="wish-avatar gradient-avatar">
+                        <span>DL</span>
+                    </div>
+                    <div class="wish-content">
+                        <div class="wish-header">
+                            <h4 class="wish-name">Dewi Lestari</h4>
+                            <span class="wish-date">14 Des 2024</span>
+                        </div>
+                        <p class="wish-text">Barakallah untuk pernikahan kalian! Semoga Allah senantiasa memberkahi
+                            rumah tangga kalian dengan kebahagiaan dan keberkahan. Aamiin 🤲✨</p>
+                    </div>
+                </div>
+                <div class="wish-card">
+                    <div class="wish-avatar gradient-avatar">
+                        <span>RF</span>
+                    </div>
+                    <div class="wish-content">
+                        <div class="wish-header">
+                            <h4 class="wish-name">Rina Fitriani</h4>
+                            <span class="wish-date">13 Des 2024</span>
+                        </div>
+                        <p class="wish-text">Happy wedding day! Semoga pernikahan ini menjadi awal dari perjalanan indah
+                            yang penuh cinta dan kebahagiaan. Love you both! ❤️🎊</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gift Section - Modern Cards -->
+        <section class="gift-section">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">🎁 WEDDING GIFT</span>
+                <h2 class="section-title script-font">Hadiah Pernikahan</h2>
+                <div class="title-decoration">
+                    <span class="line"></span>
+                    <div class="heart-badge">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <span class="line"></span>
+                </div>
+                <p class="section-subtitle">Doa restu Anda merupakan karunia yang sangat berarti bagi kami. Namun, jika
+                    Anda ingin memberikan tanda kasih: 💝</p>
+            </div>
+
+            <div class="gift-cards" data-aos="fade-up" data-aos-delay="200">
+                <div class="gift-card glass-card-premium">
+                    <div class="gift-card-glow"></div>
+                    <div class="gift-icon">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Bank_Central_Asia.svg" alt="BCA"
+                            onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-university\'></i>'">
+                    </div>
+                    <h3>Bank BCA</h3>
+                    <p class="account-number">1234567890</p>
+                    <p class="account-name">a.n Mochammad Fauzi Nur Fadillah</p>
+                    <button class="copy-btn" onclick="copyToClipboard('1234567890')">
+                        <i class="fas fa-copy"></i>
+                        <span>Salin Nomor</span>
+                    </button>
+                </div>
+                <div class="gift-card glass-card-premium">
+                    <div class="gift-card-glow"></div>
+                    <div class="gift-icon">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/ad/Bank_Mandiri_logo_2016.svg"
+                            alt="Mandiri"
+                            onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-university\'></i>'">
+                    </div>
+                    <h3>Bank Mandiri</h3>
+                    <p class="account-number">0987654321</p>
+                    <p class="account-name">a.n Firna Amalia Aprilian</p>
+                    <button class="copy-btn" onclick="copyToClipboard('0987654321')">
+                        <i class="fas fa-copy"></i>
+                        <span>Salin Nomor</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="gift-address glass-card-premium" data-aos="fade-up" data-aos-delay="300">
+                <div class="gift-address-icon">
+                    <i class="fas fa-gift"></i>
+                </div>
+                <h4>Kirim Hadiah</h4>
+                <p>Jl. Kebahagiaan No. 123, RT 01/RW 02<br>Kelurahan Cinta, Kecamatan Kasih Sayang<br>Jakarta Selatan,
+                    12345</p>
+                <button class="copy-btn"
+                    onclick="copyToClipboard('Jl. Kebahagiaan No. 123, RT 01/RW 02, Kelurahan Cinta, Kecamatan Kasih Sayang, Jakarta Selatan, 12345')">
+                    <i class="fas fa-copy"></i>
+                    <span>Salin Alamat</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Closing Section - Dramatic -->
+        <section class="closing-section">
+            <div class="closing-bg-gradient"></div>
+            <div class="closing-particles" id="closing-particles"></div>
+            <div class="closing-ornaments">
+                <img src="images/flower-ornament.png" alt="" class="closing-flower-left">
+                <img src="images/flower-ornament.png" alt="" class="closing-flower-right">
+            </div>
+
+            <div class="closing-content" data-aos="fade-up">
+                <div class="closing-quote-card glass-card-premium">
+                    <div class="quote-decoration">"</div>
+                    <p class="closing-quote">
+                        Maha Suci Allah yang telah menciptakan pasangan-pasangan semuanya,
+                        baik dari apa yang ditumbuhkan oleh bumi dan dari diri mereka
+                        maupun dari apa yang tidak mereka ketahui.
+                    </p>
+                    <p class="closing-source">— QS. Yasin: 36 —</p>
+                </div>
+
+                <div class="thank-you" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="thank-you-decoration">
+                        <span class="sparkle">✨</span>
+                        <span class="sparkle">✨</span>
+                    </div>
+                    <h2 class="script-font">Terima Kasih</h2>
+                    <p>Atas kehadiran dan doa restu Anda, kami mengucapkan terima kasih yang sebesar-besarnya.</p>
+                    <div class="couple-names-closing">
+                        <span class="name script-font">Fauzi</span>
+                        <span class="heart">❤️</span>
+                        <span class="name script-font">Firna</span>
+                    </div>
+                    <p class="wedding-hashtag">#FauziFirnaWedding 💍</p>
+                </div>
+
+                <div class="share-buttons" data-aos="fade-up" data-aos-delay="300">
+                    <p class="share-text">Bagikan Undangan:</p>
+                    <div class="share-icons">
+                        <a href="#" class="share-btn whatsapp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="#" class="share-btn instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="share-btn facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="share-btn twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="share-btn tiktok">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="footer">
+                <div class="footer-content">
+                    <p>Made with <i class="fas fa-heart beating-heart"></i> for Fauzi & Firna</p>
+                    <p class="footer-credit">© 2025 Wedding Invitation</p>
+                </div>
+            </footer>
+        </section>
+    </main>
+
+    <!-- Lightbox Modal - Enhanced -->
+    <div id="lightbox" class="lightbox">
+        <div class="lightbox-backdrop"></div>
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <div class="lightbox-caption"></div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
